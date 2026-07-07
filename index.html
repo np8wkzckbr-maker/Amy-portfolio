@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amy Sessions | Marketing Strategy Leader</title>
+<meta name="description" content="Amy Sessions is a marketing strategy leader who creates clarity that drives action. 15+ years leading brand, lifecycle, product, and go-to-market strategy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Public+Sans:ital,wght@0,300..800;1,300..800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FDFDFB;
+  --sand:#EFF4EE;
+  --ink:#1B1813;
+  --soft:#5F675E;
+  --line:#E2E7E0;
+  --marigold:#D9CEF2;
+  --coral:#1E6F4C;
+  --pine:#28453A;
+  --lilac:#EFEAF6;
+  --display:'Young Serif',Georgia,serif;
+  --body:'Public Sans',system-ui,sans-serif;
+  --note:'Caveat',cursive;
+  --max:1100px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.7;font-weight:400;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+section{padding:110px 0;position:relative}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:2px}
+
+.kicker{font-family:var(--body);font-weight:700;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--coral);margin-bottom:22px;display:flex;align-items:baseline;gap:14px}
+.kicker .no{font-family:var(--display);font-size:15px;letter-spacing:0;text-transform:none;color:var(--ink)}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(34px,4.8vw,58px);line-height:1.08;margin-bottom:26px;max-width:18ch}
+h3{font-family:var(--display);font-weight:400;font-size:22px;line-height:1.25}
+.lede{font-size:clamp(19px,2.1vw,22px);color:var(--soft);max-width:640px;line-height:1.65}
+
+/* Highlighter signature */
+.hl{white-space:normal}
+
+/* Margin notes */
+.note{font-family:var(--note);font-size:22px;color:var(--coral);line-height:1.25;transform:rotate(-2.5deg);display:inline-block}
+.note svg{display:block;margin:2px auto 0}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,252,245,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.navin{max-width:var(--max);margin:0 auto;padding:0 28px;height:66px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--display);font-size:19px;text-decoration:none}
+.logo em{font-style:normal;color:var(--coral)}
+.navlinks{display:flex;gap:26px;list-style:none}
+.navlinks a{font-weight:600;font-size:13.5px;text-decoration:none;color:var(--soft);transition:color .2s}
+.navlinks a:hover{color:var(--coral)}
+.navcta{font-weight:700;font-size:13px;text-decoration:none;background:var(--coral);color:#fff;padding:10px 20px;border-radius:99px;transition:background .2s,transform .15s}
+.navcta:hover{background:var(--pine);transform:translateY(-1px)}
+#progress{position:absolute;bottom:-1px;left:0;height:3px;background:var(--marigold);width:0%}
+.menu-btn{display:none;background:none;border:none;font-weight:700;font-size:13px;letter-spacing:.08em;cursor:pointer;font-family:var(--body)}
+@media(max-width:900px){
+  .navlinks,.navcta{display:none}
+  .menu-btn{display:block}
+  nav.open .navlinks{display:flex;position:absolute;top:66px;left:0;right:0;background:var(--paper);flex-direction:column;padding:24px 28px;gap:18px;border-bottom:1px solid var(--line)}
+}
+
+/* MASTHEAD HERO */
+header{padding:170px 0 90px;border-bottom:2px solid var(--coral)}
+.mast-top{display:flex;justify-content:space-between;font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:56px;flex-wrap:wrap;gap:10px}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(48px,9vw,116px);line-height:1.02;letter-spacing:-.01em;max-width:13ch}
+.hero-sub{margin-top:36px;font-size:clamp(19px,2.3vw,23px);color:var(--soft);max-width:600px;line-height:1.65}
+.hero-row{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.hero-note{max-width:190px;text-align:center;margin-bottom:6px}
+.hero-ctas{margin-top:44px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{font-weight:700;font-size:15px;text-decoration:none;padding:15px 30px;border-radius:99px;transition:transform .15s,background .2s,color .2s,border-color .2s;display:inline-block}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--coral);color:#fff}
+.btn-primary:hover{background:var(--pine)}
+.btn-ghost{border:1.5px solid var(--ink)}
+.btn-ghost:hover{border-color:var(--coral);color:var(--coral)}
+
+/* METRICS as front-page stats */
+#impact{padding:90px 0;border-bottom:1px solid var(--line)}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.stat{padding:34px 30px;border-left:1px solid var(--line)}
+.stat:first-child{border-left:none}
+.stat-num{font-family:var(--display);font-size:clamp(36px,4.4vw,58px);line-height:1}
+.stat-num i{font-style:normal;color:var(--coral);font-size:.6em}
+.stat-label{font-size:14px;color:var(--soft);margin-top:12px;font-weight:500}
+.stat-sub{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);margin-top:10px}
+.stat-sub .stat-num{font-size:clamp(24px,2.6vw,32px)}
+@media(max-width:820px){.stat-grid,.stat-sub{grid-template-columns:repeat(2,1fr)}.stat:nth-child(3){border-left:none}}
+
+/* PHILOSOPHY pull quote */
+#philosophy{background:var(--sand);text-align:center}
+#philosophy blockquote{font-family:var(--display);font-size:clamp(26px,3.6vw,42px);line-height:1.35;max-width:20ch;margin:0 auto}
+#philosophy .attr{margin-top:30px;font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft)}
+.bigquote-mark{font-family:var(--display);font-size:90px;color:var(--coral);line-height:.4;display:block;margin-bottom:30px}
+
+/* ABOUT feature spread */
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:start;margin-top:20px}
+.about-grid p{margin-bottom:22px}
+.dropcap::first-letter{font-family:var(--display);font-size:4.1em;float:left;line-height:.78;padding:6px 12px 0 0;color:var(--coral)}
+.about-side{background:var(--sand);border-radius:20px;padding:38px;position:relative}
+.stitch::before{content:"";position:absolute;inset:9px;border:1.5px dashed rgba(30,111,76,.45);border-radius:13px;pointer-events:none}
+.about-side h3{margin-bottom:20px}
+.about-side ul{list-style:none}
+.about-side li{padding:13px 0;border-bottom:1px solid var(--line);font-size:16.5px}
+.about-side li:last-child{border:none}
+.about-side li b{font-family:var(--display);font-weight:400;display:block;font-size:17px}
+.about-side .note{position:absolute;top:-22px;right:22px}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:44px}}
+
+/* PORTRAIT */
+.about-top{display:grid;grid-template-columns:300px 1fr;gap:60px;align-items:center;margin:14px 0 54px}
+.portrait{position:relative;margin:0}
+.portrait .frame{width:100%;aspect-ratio:4/5;border-radius:999px 999px 22px 22px;background:var(--sand);display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;position:relative}
+.portrait .frame::before{content:"";position:absolute;inset:10px;border:1.5px dashed rgba(30,111,76,.45);border-radius:999px 999px 14px 14px;pointer-events:none}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.portrait .placeholder{font-family:var(--note);font-size:24px;color:var(--coral);transform:rotate(-2deg);padding:0 30px}
+.portrait figcaption{font-family:var(--note);font-size:21px;color:var(--coral);text-align:center;margin-top:14px;transform:rotate(-1.5deg)}
+@media(max-width:900px){.about-top{grid-template-columns:1fr;gap:34px}.portrait{max-width:270px;margin:0 auto}}
+
+/* FRAMEWORK */
+.frame-grid{display:grid;grid-template-columns:260px 1fr;gap:80px;margin-top:60px}
+.spine{position:sticky;top:110px;align-self:start;list-style:none}
+.spine li{font-family:var(--display);font-size:21px;padding:11px 0 11px 24px;border-left:2px solid var(--line);color:var(--soft);opacity:.4;transition:all .25s;cursor:pointer}
+.spine li.active{border-color:var(--coral);color:var(--ink);opacity:1;padding-left:32px}
+.steps article{padding:44px 0;border-bottom:1px solid var(--line)}
+.steps article:last-child{border-bottom:none}
+.steps h3{font-size:27px;margin-bottom:14px}
+.steps h3 .stepno{font-family:var(--body);font-weight:700;font-size:12px;letter-spacing:.2em;color:var(--coral);display:block;margin-bottom:10px;text-transform:uppercase}
+.steps p{color:var(--soft);max-width:560px}
+@media(max-width:900px){.frame-grid{grid-template-columns:1fr}.spine{display:none}}
+
+/* QUESTIONS */
+#questions{background:var(--pine);color:var(--paper)}
+#questions .kicker{color:var(--marigold)}
+#questions .kicker .no{color:var(--paper)}
+#questions h2{color:var(--paper)}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:44px 0 40px}
+.tab{font-family:var(--body);font-weight:700;font-size:14.5px;padding:11px 22px;border-radius:99px;border:1.5px solid rgba(255,252,245,.3);background:none;color:rgba(255,252,245,.75);cursor:pointer;transition:all .2s}
+.tab:hover{border-color:var(--paper);color:var(--paper)}
+.tab.active{background:var(--marigold);border-color:var(--marigold);color:var(--ink)}
+.qlist{list-style:none;columns:2;column-gap:60px;max-width:900px}
+.qlist li{font-family:var(--display);font-size:clamp(18px,2vw,22px);line-height:1.45;padding:16px 0;border-bottom:1px solid rgba(255,252,245,.15);break-inside:avoid}
+.qlist li::before{content:"?";color:var(--marigold);margin-right:14px}
+@media(max-width:800px){.qlist{columns:1}}
+
+/* EXPERTISE index page */
+.exp-list{margin-top:50px;border-top:2px solid var(--coral)}
+.exp-row{display:grid;grid-template-columns:200px 1fr;gap:40px;padding:30px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.exp-row h3{font-size:21px}
+.exp-row ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.exp-row li{font-weight:600;font-size:13px;background:var(--sand);border-radius:99px;padding:6px 14px;color:var(--soft)}
+@media(max-width:700px){.exp-row{grid-template-columns:1fr;gap:14px}}
+
+/* CASE STUDIES as feature articles */
+#work{background:var(--sand)}
+.case{background:var(--paper);border:1px solid var(--line);border-radius:20px;margin-bottom:18px;overflow:hidden;transition:border-color .2s,box-shadow .2s}
+.case:hover{border-color:var(--coral);box-shadow:0 6px 24px rgba(27,24,19,.06)}
+.case-head{width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:30px 34px;background:none;border:none;cursor:pointer;text-align:left}
+.case-head h3{font-size:clamp(20px,2.4vw,27px)}
+.case-tag{font-family:var(--body);font-weight:700;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);display:block;margin-bottom:8px}
+.case-toggle{font-family:var(--display);font-size:30px;color:var(--coral);flex-shrink:0;transition:transform .25s;line-height:1}
+.case.open .case-toggle{transform:rotate(45deg)}
+.case-body{max-height:0;overflow:hidden;transition:max-height .45s ease}
+.case-inner{padding:0 34px 36px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px}
+.case-inner h4{font-weight:700;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--soft);margin-bottom:10px}
+.case-inner h4::before{content:"";display:inline-block;width:18px;height:3px;background:#A9CDB8;margin-right:10px;vertical-align:middle}
+.case-inner p{font-size:16px;line-height:1.65}
+@media(max-width:800px){.case-inner{grid-template-columns:1fr;gap:22px}}
+
+/* PLAYBOOKS as a table of contents */
+.play-toc{margin-top:50px;border-top:2px solid var(--coral);max-width:840px;counter-reset:pb}
+.play-toc li{list-style:none;counter-increment:pb;display:flex;align-items:baseline;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);font-family:var(--display);font-size:clamp(18px,2.3vw,24px);transition:color .2s,padding-left .2s;cursor:default}
+.play-toc li:hover{color:var(--coral);padding-left:10px}
+.play-toc li::before{content:counter(pb,decimal-leading-zero);font-family:var(--body);font-weight:700;font-size:13px;color:var(--coral);letter-spacing:.08em}
+.play-toc li::after{content:"";flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px)}
+
+/* THOUGHTS */
+#thoughts{background:var(--sand)}
+.thought-list{list-style:none;margin-top:50px;max-width:840px}
+.thought-list li{border-bottom:1px solid var(--line);padding:24px 0;font-family:var(--display);font-size:clamp(20px,2.7vw,29px);display:flex;justify-content:space-between;align-items:baseline;gap:20px;transition:color .2s,padding-left .2s}
+.thought-list li:hover{color:var(--coral);padding-left:10px}
+.thought-list span{font-family:var(--body);font-weight:700;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);flex-shrink:0}
+
+/* RECS */
+.rec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:54px}
+.rec{background:var(--sand);border-radius:20px;padding:36px;display:flex;flex-direction:column;gap:22px;position:relative}
+.rec blockquote{font-family:var(--display);font-size:22px;line-height:1.45}
+.rec blockquote::before{content:"\201C";color:var(--coral);font-size:46px;display:block;line-height:.5;margin-bottom:16px}
+.rec cite{font-style:normal;font-weight:700;font-size:13px;letter-spacing:.06em;color:var(--soft);margin-top:auto}
+
+/* CONTACT */
+#contact{background:var(--lilac);color:var(--ink);text-align:center;padding:140px 0}
+#contact h2{color:var(--ink);font-size:clamp(40px,6vw,76px);max-width:15ch;margin:0 auto 26px}
+#contact p{color:var(--soft);max-width:540px;margin:0 auto 46px;font-size:19px}
+#contact .btn-primary{background:var(--coral);color:#fff}
+#contact .btn-primary:hover{background:var(--ink)}
+#contact .btn-ghost{border-color:var(--ink);color:var(--ink)}
+#contact .btn-ghost:hover{border-color:var(--coral);color:var(--coral)}
+.ctas-center{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+#contact .note{color:var(--coral);margin-top:50px;font-size:24px}
+footer{background:var(--paper);color:var(--soft);text-align:center;padding:34px 0;font-size:13px;border-top:1px solid var(--line)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="navin">
+    <a class="logo" href="#top">Amy Sessions<em>.</em></a>
+    <ul class="navlinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#think">How I Think</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#work">Case Studies</a></li>
+      <li><a href="#playbooks">Playbooks</a></li>
+      <li><a href="#thoughts">Writing</a></li>
+    </ul>
+    <a class="navcta" href="#contact">Let's Connect</a>
+    <button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('open')">Menu</button>
+  </div>
+  <div id="progress"></div>
+</nav>
+
+<header id="top">
+  <div class="wrap">
+    <div class="mast-top"><span>Marketing Strategy Leader</span><span>Est. 13+ years in the field</span><span>Vol. 1</span></div>
+    <div class="hero-row">
+      <h1><span class="hl">Clarity</span> that drives action.</h1>
+      <div class="hero-note note">the whole job,<br>in four words
+        <svg width="60" height="26" viewBox="0 0 60 26" fill="none"><path d="M55 3C40 20 20 24 4 14" stroke="#1E6F4C" stroke-width="2" stroke-linecap="round"/><path d="M10 8l-6 6 8 3" stroke="#1E6F4C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      </div>
+    </div>
+    <p class="hero-sub">I help organizations simplify complexity, align teams, and build marketing strategies that create measurable business growth.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#work">View My Work</a>
+      <a class="btn btn-ghost" href="#" aria-label="Download resume">Download Resume</a>
+    </div>
+  </div>
+</header>
+
+<section id="impact" style="padding-top:90px">
+  <div class="wrap">
+    <p class="kicker"><span class="no">No. 01</span>Impact at Scale</p>
+    <div class="stat-grid reveal">
+      <div class="stat"><div class="stat-num"><span data-count="13"></span><i>+</i></div><div class="stat-label">Years of marketing leadership</div></div>
+      <div class="stat"><div class="stat-num"><span data-count="40"></span><i>+</i></div><div class="stat-label">Product launches and relaunches</div></div>
+      <div class="stat"><div class="stat-num"><span data-count="3.8" data-decimals="1"></span><i>M+</i></div><div class="stat-label">Subscribers and customers supported</div></div>
+      <div class="stat"><div class="stat-num"><span data-count="34"></span></div><div class="stat-label">Global markets, 23 languages</div></div>
+    </div>
+    <div class="stat-sub reveal">
+      <div class="stat"><div class="stat-num"><i>$</i><span data-count="770" data-comma="1"></span><i>K</i></div><div class="stat-label">First-week sales, biggest launch in company history</div></div>
+      <div class="stat"><div class="stat-num"><span data-count="12"></span></div><div class="stat-label">Direct reports, 4 promoted</div></div>
+      <div class="stat"><div class="stat-num"><span data-count="10000" data-comma="1"></span><i>+</i></div><div class="stat-label">Marketing assets directed</div></div>
+      <div class="stat"><div class="stat-num">100s<i> of millions</i></div><div class="stat-label">Marketing emails delivered</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="philosophy">
+  <div class="wrap reveal">
+    <span class="bigquote-mark">&ldquo;</span>
+    <blockquote>Great marketing starts long before the first campaign. It starts with <span class="hl">understanding</span>.</blockquote>
+    <p class="attr">My Philosophy</p>
+    <svg width="72" height="40" viewBox="0 0 72 40" fill="none" style="margin-top:26px" aria-hidden="true">
+      <path d="M36 38C36 24 36 14 36 4" stroke="#1E6F4C" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M36 30C28 28 22 22 21 15c7 1 13 7 15 15Z" stroke="#1E6F4C" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M36 30c8-2 14-8 15-15-7 1-13 7-15 15Z" stroke="#1E6F4C" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M36 16c-5-1-9-5-10-10 5 1 9 5 10 10Z" stroke="#8A76C2" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M36 16c5-1 9-5 10-10-5 1-9 5-10 10Z" stroke="#8A76C2" stroke-width="1.8" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <p class="kicker"><span class="no">No. 02</span>About</p>
+    <h2>Builder. Strategist. <span class="hl">Mom.</span></h2>
+    <div class="about-top reveal">
+      <figure class="portrait">
+        <div class="frame">
+          <!-- REPLACE the placeholder div below with: <img src="your-photo.jpg" alt="Amy Sessions"> -->
+          <div class="placeholder">your photo here<br>(arch frame, ready when you are)</div>
+        </div>
+        <figcaption>hi, I'm Amy</figcaption>
+      </figure>
+      <div>
+        <p class="dropcap">At my core, I'm a builder. I love taking ideas that feel messy or overwhelming and turning them into something people understand, believe in, and can execute. A marketing strategy, a product launch, a better process, an AI workflow, or teaching myself web development: I genuinely enjoy building things that make life easier for others.</p>
+      </div>
+    </div>
+    <div class="about-grid reveal">
+      <div>
+        <p>Professionally, I enjoy solving business problems. Personally, I enjoy helping people. Those two things have never felt very different to me.</p>
+        <p>Outside of work, my favorite title is Mom. My boys keep me humble, make me laugh, and remind me every day that growth usually happens outside our comfort zones.</p>
+        <p>I'm an eternal optimist. I believe we can find opportunity in almost every challenge, that life should be fun, and that great work happens when people genuinely enjoy working together. Sometimes you need the perfect strategy. Sometimes you just need to get scrappy and figure it out.</p>
+      </div>
+      <div class="about-side stitch">
+        <span class="note">non-negotiables ↓</span>
+        <h3>What I run on</h3>
+        <ul>
+          <li><b>Curiosity</b> I ask questions before offering solutions.</li>
+          <li><b>Hard work</b> No job is beneath me.</li>
+          <li><b>Optimism</b> I choose possibility over pessimism.</li>
+          <li><b>Communication</b> Alignment starts with clear conversations.</li>
+          <li><b>Teamwork</b> Great work is never created alone.</li>
+          <li><b>Growth</b> Always learning. Always improving.</li>
+          <li><b>Joy</b> Life is too short not to enjoy what you do.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="think">
+  <div class="wrap">
+    <p class="kicker"><span class="no">No. 03</span>How I Think</p>
+    <h2>Great strategy starts with <span class="hl">curiosity</span>.</h2>
+    <p class="lede">I don't believe the best strategies begin with answers. They begin with understanding. When you understand the real problem, the right strategy becomes much clearer.</p>
+    <div class="frame-grid">
+      <ol class="spine" id="spine">
+        <li data-step="s1" class="active">Listen</li>
+        <li data-step="s2">Understand</li>
+        <li data-step="s3">Simplify</li>
+        <li data-step="s4">Align</li>
+        <li data-step="s5">Execute</li>
+        <li data-step="s6">Learn</li>
+        <li data-step="s7">Improve</li>
+      </ol>
+      <div class="steps">
+        <article id="s1"><h3><span class="stepno">Step 01</span>Listen</h3><p>Every project begins with people. I want to hear from employees, customers, sales teams, and leadership before making assumptions. Questions create better strategies than opinions ever will.</p></article>
+        <article id="s2"><h3><span class="stepno">Step 02</span>Understand</h3><p>I look at the entire picture: business goals, revenue, customer behavior, competitive landscape, market trends, and data. Only then do I decide what problem we're actually solving.</p></article>
+        <article id="s3"><h3><span class="stepno">Step 03</span>Simplify</h3><p>Complexity creates confusion, and confusion slows organizations down. My job is to simplify products, messaging, priorities, and processes so teams know exactly what to do next.</p></article>
+        <article id="s4"><h3><span class="stepno">Step 04</span>Align</h3><p>The best strategy fails without alignment. Marketing, sales, creative, product, operations, and leadership should all understand the objective before execution begins.</p></article>
+        <article id="s5"><h3><span class="stepno">Step 05</span>Execute</h3><p>Strategy means nothing without execution. Once the direction is clear, I enjoy building the systems, programs, launches, and campaigns that bring ideas to life.</p></article>
+        <article id="s6"><h3><span class="stepno">Step 06</span>Learn</h3><p>Every project teaches something. I measure results, gather feedback, celebrate wins, and adjust what didn't work.</p></article>
+        <article id="s7"><h3><span class="stepno">Step 07</span>Improve</h3><p>Continuous improvement isn't a phase. It's the job.</p></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="questions">
+  <div class="wrap">
+    <p class="kicker"><span class="no">No. 04</span>Questions I Ask</p>
+    <h2>Better questions beat <span class="hl">faster answers</span>.</h2>
+    <div class="tabs" role="tablist">
+      <button class="tab active" role="tab" data-panel="q1">When marketing isn't working</button>
+      <button class="tab" role="tab" data-panel="q2">During product development</button>
+      <button class="tab" role="tab" data-panel="q3">During meetings</button>
+    </div>
+    <ul class="qlist" id="q1">
+      <li>What problem are we actually trying to solve?</li>
+      <li>What changed?</li>
+      <li>What does the customer think?</li>
+      <li>What assumptions are we making?</li>
+      <li>What does the data tell us?</li>
+      <li>What are reviews saying?</li>
+      <li>What is Reddit saying?</li>
+      <li>Is this actually a marketing problem?</li>
+    </ul>
+    <ul class="qlist" id="q2" hidden>
+      <li>Who is this product for?</li>
+      <li>What problem does it solve?</li>
+      <li>Do we have research? Do we have testing?</li>
+      <li>Can we support our claims?</li>
+      <li>What are competitors doing?</li>
+      <li>Do we know our positioning?</li>
+      <li>Do we all understand the objective?</li>
+      <li>Did we forget anything?</li>
+    </ul>
+    <ul class="qlist" id="q3" hidden>
+      <li>Do we all understand the objective?</li>
+      <li>Are we solving the right problem?</li>
+      <li>Who else needs to be involved?</li>
+      <li>What are we missing?</li>
+      <li>What decision are we making today?</li>
+    </ul>
+  </div>
+</section>
+
+<section id="expertise">
+  <div class="wrap">
+    <p class="kicker"><span class="no">No. 05</span>Expertise</p>
+    <h2>Where I create the most value.</h2>
+    <div class="exp-list reveal">
+      <div class="exp-row"><h3>Strategic Marketing</h3><ul><li>Business strategy</li><li>Growth planning</li><li>Customer insights</li><li>Competitive analysis</li><li>Market research</li><li>Executive recommendations</li></ul></div>
+      <div class="exp-row"><h3>Brand Strategy</h3><ul><li>Positioning</li><li>Messaging</li><li>Brand architecture</li><li>Voice</li><li>Differentiation</li><li>Storytelling</li></ul></div>
+      <div class="exp-row"><h3>Product &amp; Go-to-Market</h3><ul><li>Research</li><li>Positioning</li><li>Launch strategy</li><li>Packaging</li><li>Claims</li><li>Pricing</li><li>Sales enablement</li></ul></div>
+      <div class="exp-row"><h3>Customer Growth</h3><ul><li>Customer journeys</li><li>Lifecycle</li><li>Retention</li><li>Email</li><li>SMS</li><li>Automation</li><li>Segmentation</li></ul></div>
+      <div class="exp-row"><h3>Executive Communications</h3><ul><li>Executive presentations</li><li>Leadership messaging</li><li>Field communications</li><li>Change management</li></ul></div>
+      <div class="exp-row"><h3>Program Leadership</h3><ul><li>Cross-functional leadership</li><li>Roadmaps</li><li>Stakeholder alignment</li><li>Process improvement</li><li>Risk management</li></ul></div>
+      <div class="exp-row"><h3>Team Leadership</h3><ul><li>Hiring</li><li>Coaching</li><li>Mentoring</li><li>Career development</li><li>Leading through change</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <p class="kicker"><span class="no">No. 06</span>Case Studies</p>
+    <h2>Strategy, proven <span class="hl">in the field</span>.</h2>
+    <p class="lede" style="margin-bottom:54px">Every engagement follows the same discipline: understand the real problem, build the strategy, align the teams, execute, and measure what happened.</p>
+
+    <div class="case">
+      <button class="case-head" aria-expanded="false"><div><span class="case-tag">Field Activation</span><h3>ASEA One: Relaunching the Compensation Plan to 80,000 Distributors</h3></div><span class="case-toggle">+</span></button>
+      <div class="case-body"><div class="case-inner">
+        <div><h4>Challenge</h4><p>Overhaul the compensation and rewards program for 80,000+ independent distributors, where confusion kills momentum and the field's trust is the whole business.</p></div>
+        <div><h4>Strategy</h4><p>Led strategic messaging and launch communications end to end: authored the program manual and directed deployment of 1,000+ assets across 34 markets and 23 languages.</p></div>
+        <div><h4>Outcome</h4><p>Contributed to a 19.5% increase in new Brand Partner enrollments following launch.</p></div>
+      </div></div>
+    </div>
+
+    <div class="case">
+      <button class="case-head" aria-expanded="false"><div><span class="case-tag">Go-to-Market</span><h3>REDOXGold: The Biggest Launch in Company History</h3></div><span class="case-toggle">+</span></button>
+      <div class="case-body"><div class="case-inner">
+        <div><h4>Challenge</h4><p>Launch a flagship product into a loyal but launch-fatigued global customer base, in a category where every claim is regulated.</p></div>
+        <div><h4>Strategy</h4><p>Directed global go-to-market strategy, coordinating 100+ stakeholders across 10+ departments and international regions to deliver launch assets in 34 markets and 23 languages.</p></div>
+        <div><h4>Outcome</h4><p>$770K in first-week sales and the highest sales week in company history.</p></div>
+      </div></div>
+    </div>
+
+    <div class="case">
+      <button class="case-head" aria-expanded="false"><div><span class="case-tag">Brand &amp; Product</span><h3>Repositioning a 14-Product Portfolio</h3></div><span class="case-toggle">+</span></button>
+      <div class="case-body"><div class="case-inner">
+        <div><h4>Challenge</h4><p>Six product lines, 14+ products, and years of accumulated messaging drift. Every line telling its own story, and none of them telling the brand's.</p></div>
+        <div><h4>Strategy</h4><p>Developed a unified brand voice, messaging architecture, and field-ready copy across the full portfolio, including ASEA VIA, RENUAdvanced, ASEA Performance, REDOXGold, RENU28, and ARS.</p></div>
+        <div><h4>Outcome</h4><p>One voice, one architecture, and compliant field-ready messaging across every product line and customer touchpoint.</p></div>
+      </div></div>
+    </div>
+
+    <div class="case">
+      <button class="case-head" aria-expanded="false"><div><span class="case-tag">Lifecycle</span><h3>Building a Lifecycle Program from the Ground Up</h3></div><span class="case-toggle">+</span></button>
+      <div class="case-body"><div class="case-inner">
+        <div><h4>Challenge</h4><p>Hundreds of thousands of customers and associates with no structured journey: no onboarding, no win-back, and revenue dependent on one-off sends.</p></div>
+        <div><h4>Strategy</h4><p>Built the full lifecycle program: a segmented onboarding series with two behavioral journey tracks, plus an automated win-back campaign targeting associates inactive 180+ days.</p></div>
+        <div><h4>Outcome</h4><p>44%+ average email open rates, 60% engagement growth, 80% of campaign revenue driven by automated journeys, and a 3.1% win-back conversion rate, 55% above benchmark.</p></div>
+      </div></div>
+    </div>
+
+    <div class="case">
+      <button class="case-head" aria-expanded="false"><div><span class="case-tag">Retention at Scale</span><h3>Scaling SMS from $500K to $1.7M at Young Living</h3></div><span class="case-toggle">+</span></button>
+      <div class="case-body"><div class="case-inner">
+        <div><h4>Challenge</h4><p>A brand-new SMS channel serving a base of 3.8M+ email subscribers and 100K+ SMS subscribers, with a team of seven running 200+ marketing projects every month.</p></div>
+        <div><h4>Strategy</h4><p>Launched and scaled the SMS program while running lifecycle, retention, and win-back across hundreds of millions of email sends. Redesigned workflows and built a QA program to keep quality high at volume.</p></div>
+        <div><h4>Outcome</h4><p>Grew SMS from $500K to $1.7M+ in annual revenue within one year, sustained a 2.3% average conversion rate, and increased production capacity by 150%.</p></div>
+      </div></div>
+    </div>
+
+    <div class="case">
+      <button class="case-head" aria-expanded="false"><div><span class="case-tag">Entrepreneurship</span><h3>Beach Baby: Building a Six-Figure Ecommerce Brand</h3></div><span class="case-toggle">+</span></button>
+      <div class="case-body"><div class="case-inner">
+        <div><h4>Challenge</h4><p>Build a brand from zero with no team, no budget, and 500+ SKUs to source, price, and merchandise.</p></div>
+        <div><h4>Strategy</h4><p>Built and scaled a multi-channel ecommerce business across Amazon, Etsy, and eBay, owning sourcing, merchandising, pricing, inventory, marketplace optimization, and financial planning.</p></div>
+        <div><h4>Outcome</h4><p>A profitable six-figure brand, run for six years. Nothing teaches marketing discipline like spending your own money.</p></div>
+      </div></div>
+    </div>
+
+    <div class="case">
+      <button class="case-head" aria-expanded="false"><div><span class="case-tag">Strategic Audit</span><h3>Sora: A Lifecycle Strategy Audit</h3></div><span class="case-toggle">+</span></button>
+      <div class="case-body"><div class="case-inner">
+        <div><h4>Challenge</h4><p>How do you evaluate a growing DTC wellness brand's lifecycle opportunity from the outside in?</p></div>
+        <div><h4>Strategy</h4><p>Built an independent strategic audit: competitive analysis against the category leader, a full lifecycle opportunity map, and a 30/60/90 day activation plan.</p></div>
+        <div><h4>Outcome</h4><p>A complete strategy workbook demonstrating how I diagnose, prioritize, and plan before day one. Available to walk through live.</p></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section id="playbooks">
+  <div class="wrap">
+    <p class="kicker"><span class="no">No. 07</span>Playbooks</p>
+    <h2>How the work <span class="hl">gets done</span>.</h2>
+    <p class="lede">The frameworks I've built, refined, and reused across companies, categories, and teams.</p>
+    <ul class="play-toc reveal">
+      <li>How I Diagnose Marketing Problems</li>
+      <li>My Product Launch Framework</li>
+      <li>My First 30 Days as a Marketing Leader</li>
+      <li>How I Build Messaging</li>
+      <li>Marketing Prioritization Matrix</li>
+      <li>Campaign Brief Template</li>
+      <li>Executive Dashboard Framework</li>
+      <li>Cross-Functional Communication Plan</li>
+      <li>Stakeholder Alignment Checklist</li>
+      <li>Marketing Intake Framework</li>
+      <li>Customer Journey Canvas</li>
+    </ul>
+  </div>
+</section>
+
+<section id="thoughts">
+  <div class="wrap">
+    <p class="kicker"><span class="no">No. 08</span>Thoughts</p>
+    <h2>Writing on marketing, leadership, and clarity.</h2>
+    <ul class="thought-list reveal">
+      <li>Marketing begins with listening. <span>Coming soon</span></li>
+      <li>The difference between activity and impact. <span>Coming soon</span></li>
+      <li>What great product launches have in common. <span>Coming soon</span></li>
+      <li>Why alignment beats more meetings. <span>Coming soon</span></li>
+      <li>Why strategy fails. <span>Coming soon</span></li>
+      <li>Building teams people actually enjoy working on. <span>Coming soon</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="recs">
+  <div class="wrap">
+    <p class="kicker"><span class="no">No. 09</span>What Colleagues Say</p>
+    <h2>The reputation behind the resume.</h2>
+    <div class="rec-grid reveal">
+      <div class="rec stitch"><blockquote>Brings clarity to complexity.</blockquote><cite>Name, Title, Company</cite></div>
+      <div class="rec stitch"><blockquote>Raises the bar for everyone around her.</blockquote><cite>Name, Title, Company</cite></div>
+      <div class="rec stitch"><blockquote>Connects strategy with execution.</blockquote><cite>Name, Title, Company</cite></div>
+      <div class="rec stitch"><blockquote>One of the best strategic thinkers I've worked with.</blockquote><cite>Name, Title, Company</cite></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Let's build something <span class="hl">meaningful</span>.</h2>
+    <p>Whether you're looking for a marketing leader, a strategic partner, or simply want to exchange ideas, I'd love to connect.</p>
+    <div class="ctas-center">
+      <a class="btn btn-primary" href="mailto:hello@example.com">Email Me</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-ghost" href="#">Resume</a>
+    </div>
+    <p class="note">yes, I really do answer.</p>
+  </div>
+</section>
+
+<footer>&copy; 2026 Amy Sessions. Built by hand, with clarity.</footer>
+
+<script>
+const prog=document.getElementById('progress');
+addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  prog.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+},{passive:true});
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Counters
+const fmt=(v,d,c)=>{let s=d?v.toFixed(d):Math.round(v).toString();if(c)s=Number(s).toLocaleString();return s};
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;cio.unobserve(e.target);
+  const el=e.target,end=parseFloat(el.dataset.count),d=parseInt(el.dataset.decimals||0),c=el.dataset.comma;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=fmt(end,d,c);return}
+  const t0=performance.now(),dur=1400;
+  const tick=t=>{const p=Math.min((t-t0)/dur,1),ease=1-Math.pow(1-p,3);el.textContent=fmt(end*ease,d,c);if(p<1)requestAnimationFrame(tick)};
+  requestAnimationFrame(tick);
+}),{threshold:.4});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+
+// Framework spine
+const spineItems=[...document.querySelectorAll('.spine li')];
+const stepEls=spineItems.map(li=>document.getElementById(li.dataset.step));
+const sio=new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting){spineItems.forEach(li=>li.classList.toggle('active',li.dataset.step===e.target.id))}});
+},{rootMargin:'-40% 0px -50% 0px'});
+stepEls.forEach(el=>el&&sio.observe(el));
+spineItems.forEach(li=>li.addEventListener('click',()=>document.getElementById(li.dataset.step).scrollIntoView({behavior:'smooth',block:'center'})));
+
+// Tabs
+document.querySelectorAll('.tab').forEach(tab=>tab.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  tab.classList.add('active');
+  document.querySelectorAll('.qlist').forEach(l=>l.hidden=true);
+  document.getElementById(tab.dataset.panel).hidden=false;
+}));
+
+// Accordions
+document.querySelectorAll('.case-head').forEach(btn=>btn.addEventListener('click',()=>{
+  const card=btn.closest('.case'),body=card.querySelector('.case-body'),open=card.classList.toggle('open');
+  btn.setAttribute('aria-expanded',open);
+  body.style.maxHeight=open?body.scrollHeight+'px':'0';
+}));
+
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+</script>
+</body>
+</html>
